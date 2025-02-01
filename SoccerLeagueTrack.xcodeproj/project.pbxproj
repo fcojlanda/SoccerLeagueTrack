@@ -6,15 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		122EFAF02D4E97FD004703FC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 122EFAEF2D4E97FD004703FC /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		122EFAA62D4E9462004703FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 122EFA8D2D4E9461004703FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 122EFA942D4E9461004703FC;
-			remoteInfo = SoccerLeagueTrack;
-		};
-		122EFAB02D4E9463004703FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 122EFA8D2D4E9461004703FC /* Project object */;
 			proxyType = 1;
@@ -26,23 +23,18 @@
 /* Begin PBXFileReference section */
 		122EFA952D4E9461004703FC /* SoccerLeagueTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerLeagueTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		122EFAA52D4E9462004703FC /* SoccerLeagueTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerLeagueTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		122EFAAF2D4E9463004703FC /* SoccerLeagueTrackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerLeagueTrackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		122EFAEF2D4E97FD004703FC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		122EFA972D4E9461004703FC /* SoccerLeagueTrack */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SoccerLeagueTrack;
-			sourceTree = "<group>";
-		};
 		122EFAA82D4E9462004703FC /* SoccerLeagueTrackTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SoccerLeagueTrackTests;
 			sourceTree = "<group>";
 		};
-		122EFAB22D4E9463004703FC /* SoccerLeagueTrackUITests */ = {
+		122EFB0D2D4E99E5004703FC /* SoccerLeagueTrack */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SoccerLeagueTrackUITests;
+			path = SoccerLeagueTrack;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,22 +54,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		122EFAAC2D4E9463004703FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		122EFA8C2D4E9461004703FC = {
 			isa = PBXGroup;
 			children = (
-				122EFA972D4E9461004703FC /* SoccerLeagueTrack */,
+				122EFAEF2D4E97FD004703FC /* README.md */,
+				122EFB0D2D4E99E5004703FC /* SoccerLeagueTrack */,
 				122EFAA82D4E9462004703FC /* SoccerLeagueTrackTests */,
-				122EFAB22D4E9463004703FC /* SoccerLeagueTrackUITests */,
 				122EFA962D4E9461004703FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +72,6 @@
 			children = (
 				122EFA952D4E9461004703FC /* SoccerLeagueTrack.app */,
 				122EFAA52D4E9462004703FC /* SoccerLeagueTrackTests.xctest */,
-				122EFAAF2D4E9463004703FC /* SoccerLeagueTrackUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,7 +92,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				122EFA972D4E9461004703FC /* SoccerLeagueTrack */,
+				122EFB0D2D4E99E5004703FC /* SoccerLeagueTrack */,
 			);
 			name = SoccerLeagueTrack;
 			packageProductDependencies = (
@@ -140,29 +124,6 @@
 			productReference = 122EFAA52D4E9462004703FC /* SoccerLeagueTrackTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		122EFAAE2D4E9463004703FC /* SoccerLeagueTrackUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 122EFABF2D4E9463004703FC /* Build configuration list for PBXNativeTarget "SoccerLeagueTrackUITests" */;
-			buildPhases = (
-				122EFAAB2D4E9463004703FC /* Sources */,
-				122EFAAC2D4E9463004703FC /* Frameworks */,
-				122EFAAD2D4E9463004703FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				122EFAB12D4E9463004703FC /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				122EFAB22D4E9463004703FC /* SoccerLeagueTrackUITests */,
-			);
-			name = SoccerLeagueTrackUITests;
-			packageProductDependencies = (
-			);
-			productName = SoccerLeagueTrackUITests;
-			productReference = 122EFAAF2D4E9463004703FC /* SoccerLeagueTrackUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,10 +138,6 @@
 						CreatedOnToolsVersion = 16.2;
 					};
 					122EFAA42D4E9462004703FC = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 122EFA942D4E9461004703FC;
-					};
-					122EFAAE2D4E9463004703FC = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 122EFA942D4E9461004703FC;
 					};
@@ -202,7 +159,6 @@
 			targets = (
 				122EFA942D4E9461004703FC /* SoccerLeagueTrack */,
 				122EFAA42D4E9462004703FC /* SoccerLeagueTrackTests */,
-				122EFAAE2D4E9463004703FC /* SoccerLeagueTrackUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,17 +168,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				122EFAF02D4E97FD004703FC /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		122EFAA32D4E9462004703FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		122EFAAD2D4E9463004703FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,13 +196,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		122EFAAB2D4E9463004703FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,11 +203,6 @@
 			isa = PBXTargetDependency;
 			target = 122EFA942D4E9461004703FC /* SoccerLeagueTrack */;
 			targetProxy = 122EFAA62D4E9462004703FC /* PBXContainerItemProxy */;
-		};
-		122EFAB12D4E9463004703FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 122EFA942D4E9461004703FC /* SoccerLeagueTrack */;
-			targetProxy = 122EFAB02D4E9463004703FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -411,6 +349,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fcojlanda.SoccerLeagueTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,6 +382,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fcojlanda.SoccerLeagueTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,40 +430,6 @@
 			};
 			name = Release;
 		};
-		122EFAC02D4E9463004703FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3267FGWQEP;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fcojlanda.SoccerLeagueTrackUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SoccerLeagueTrack;
-			};
-			name = Debug;
-		};
-		122EFAC12D4E9463004703FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3267FGWQEP;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fcojlanda.SoccerLeagueTrackUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SoccerLeagueTrack;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -544,15 +456,6 @@
 			buildConfigurations = (
 				122EFABD2D4E9463004703FC /* Debug */,
 				122EFABE2D4E9463004703FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		122EFABF2D4E9463004703FC /* Build configuration list for PBXNativeTarget "SoccerLeagueTrackUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				122EFAC02D4E9463004703FC /* Debug */,
-				122EFAC12D4E9463004703FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

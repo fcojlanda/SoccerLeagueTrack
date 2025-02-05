@@ -1,4 +1,4 @@
-struct RawTeamModel: Decodable {
+struct RawTeamModel: Codable {
     var idStanding: String?
     var intRank: String?
     var idTeam: String?

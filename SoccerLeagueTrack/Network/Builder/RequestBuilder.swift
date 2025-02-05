@@ -1,6 +1,6 @@
 import Foundation
 
-struct RequestBuilder {
+struct RequestBuilder: RequestBuilding {
     private let baseURL: URL
     private var headerStrategies: [HeaderDecorator]
     
@@ -13,10 +13,6 @@ struct RequestBuilder {
         self.headerStrategies = headerStrategies
         
         addHeaderStrategy(DefaultHeaderStrategy())
-    }
-    
-    mutating func addHeaderStrategy(_ strategy: HeaderDecorator) {
-        headerStrategies.append(strategy)
     }
     
     func buildRequest(for endpoint: Endpoint) throws -> URLRequest {
@@ -41,5 +37,9 @@ struct RequestBuilder {
         
         request.allHTTPHeaderFields = combinedHeaders
         return request
+    }
+    
+    mutating func addHeaderStrategy(_ strategy: HeaderDecorator) {
+        headerStrategies.append(strategy)
     }
 }

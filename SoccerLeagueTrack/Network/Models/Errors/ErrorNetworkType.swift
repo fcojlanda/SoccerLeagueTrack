@@ -1,4 +1,4 @@
-enum ErrorNetworkType {
+enum ErrorNetworkType: Equatable {
     case invalidResponse
     case invalidURL
     case decodingError

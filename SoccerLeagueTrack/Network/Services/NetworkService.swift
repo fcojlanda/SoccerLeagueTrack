@@ -1,12 +1,16 @@
 import Foundation
 
-actor NetworkService {
-    private let responseHandler: ResponseHandler
-    private let requestBuilder: RequestBuilder
+actor NetworkService: @preconcurrency NetworkServicing {
+    var responseHandler: ResponseHandling
+    var requestBuilder: RequestBuilding
+    var session :URLSessionProtocol
     
-    init(requestBuilder: RequestBuilder, responseHandler: ResponseHandler = ResponseHandler()) {
+    init(requestBuilder: RequestBuilding,
+         responseHandler: ResponseHandling = ResponseHandler(),
+         session: URLSessionProtocol = URLSession.shared) {
         self.requestBuilder = requestBuilder
         self.responseHandler = responseHandler
+        self.session = session
     }
     
     func performRequest<T: Decodable>(
@@ -15,7 +19,7 @@ actor NetworkService {
     ) async -> ServiceResponse<T> {
         do {
             let request = try requestBuilder.buildRequest(for: endpoint)
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await session.data(for: request)
             
             switch responseHandler.handleResponse(data, response) {
             case .success(let validData):

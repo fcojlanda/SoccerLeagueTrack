@@ -1,7 +1,7 @@
 import Foundation
 
-class ResponseHandler {
-    private let errorMapper: ErrorMapperProtocol
+class ResponseHandler: ResponseHandling {
+    var errorMapper: ErrorMapperProtocol
 
     init(errorMapper: ErrorMapperProtocol = ErrorRequestMapper()) {
         self.errorMapper = errorMapper

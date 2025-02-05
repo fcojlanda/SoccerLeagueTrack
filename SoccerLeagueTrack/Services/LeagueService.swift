@@ -1,10 +1,13 @@
 import Foundation
 
 class LeagueService {
-    private let networkService: NetworkService
-    private let requestBuilder: RequestBuilder
+    private let networkService: NetworkServicing
+    private let requestBuilder: RequestBuilding
+    private let errorMapper: ErrorMapperProtocol
 
-    init(networkService: NetworkService, baseURL: String, errorMapper: ErrorRequestMapper = ErrorRequestMapper()) {
+    init(networkService: NetworkServicing,
+         baseURL: String,
+         errorMapper: ErrorMapperProtocol = ErrorRequestMapper()) {
         self.networkService = networkService
         self.requestBuilder = RequestBuilder(stringURL: baseURL)
         self.errorMapper = errorMapper
@@ -16,14 +19,9 @@ class LeagueService {
 
         switch result {
         case .success(let tableResponse):
-            do {
-                let teamModels = tableResponse.table.map { TeamModel(from: $0) }
-                return .success(teamModels)
-            } catch {
-                return .error(error)
-            }
-
-        case .failure(let error):
+            let teamModels = tableResponse.table.map { TeamModel(from: $0) }
+            return .success(teamModels)
+        case .error(let error):
             return .error(error)
         }
     }

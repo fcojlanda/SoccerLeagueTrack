@@ -1,3 +1,3 @@
-struct TableResponse: Decodable {
+struct TableResponse: Codable {
     let table: [RawTeamModel]
 }

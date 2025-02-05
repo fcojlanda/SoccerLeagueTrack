@@ -2,14 +2,19 @@
   "configurations" : [
     {
       "id" : "2A1D4F1E-597A-46CF-8AF5-704FEA11D3F9",
-      "name" : "Configuration 1",
+      "name" : "Default",
       "options" : {
 
       }
     }
   ],
   "defaultOptions" : {
-
+    "environmentVariableEntries" : [
+      {
+        "key" : "API_ENVIRONMENT",
+        "value" : "DEV"
+      }
+    ]
   },
   "testTargets" : [
     {

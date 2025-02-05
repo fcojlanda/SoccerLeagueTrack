@@ -26,6 +26,16 @@
 		122EFAEF2D4E97FD004703FC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1267C9BD2D52E14000F847F5 /* Exceptions for "SoccerLeagueTrack" folder in "SoccerLeagueTrack" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Services/LeagueService.swift,
+			);
+			target = 122EFA942D4E9461004703FC /* SoccerLeagueTrack */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		122EFAA82D4E9462004703FC /* SoccerLeagueTrackTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -34,6 +44,9 @@
 		};
 		122EFB0D2D4E99E5004703FC /* SoccerLeagueTrack */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1267C9BD2D52E14000F847F5 /* Exceptions for "SoccerLeagueTrack" folder in "SoccerLeagueTrack" target */,
+			);
 			path = SoccerLeagueTrack;
 			sourceTree = "<group>";
 		};

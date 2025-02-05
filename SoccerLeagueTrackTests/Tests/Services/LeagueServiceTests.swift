@@ -6,14 +6,12 @@ final class LeagueServiceTests: XCTestCase {
     private var sut: LeagueService!
     private var mockNetworkService: MockNetworkService!
     private var mockRequestBuilder: MockRequestBuilder!
-    private var fakeURLString: String!
-
+    
     override func setUp() {
         super.setUp()
-        fakeURLString = "https://api.example.com"
         mockNetworkService = MockNetworkService()
         mockRequestBuilder = MockRequestBuilder()
-        sut = LeagueService(networkService: mockNetworkService, baseURL: fakeURLString)
+        sut = LeagueService(networkService: mockNetworkService)
     }
 
     override func tearDown() {

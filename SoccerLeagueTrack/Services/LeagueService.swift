@@ -1,15 +1,22 @@
 import Foundation
 
-class LeagueService {
-    private let networkService: NetworkServicing
-    private let requestBuilder: RequestBuilding
-    private let errorMapper: ErrorMapperProtocol
+class LeagueService: LeagueServicing {
+    var networkService: NetworkServicing
+    var errorMapper: ErrorMapperProtocol
 
-    init(networkService: NetworkServicing,
-         baseURL: String,
-         errorMapper: ErrorMapperProtocol = ErrorRequestMapper()) {
-        self.networkService = networkService
-        self.requestBuilder = RequestBuilder(stringURL: baseURL)
+    init(networkService: NetworkServicing? = nil, errorMapper: ErrorMapperProtocol = ErrorRequestMapper()) {
+        let defaultHeader = DefaultHeaderStrategy()
+        let requestBuilder = RequestBuilder(headerStrategies: [defaultHeader])
+        
+        if let networkService {
+            self.networkService = networkService
+        } else {
+            let networkService  = NetworkService(
+                requestBuilder: requestBuilder)
+            
+            self.networkService = networkService
+        }
+        
         self.errorMapper = errorMapper
     }
 

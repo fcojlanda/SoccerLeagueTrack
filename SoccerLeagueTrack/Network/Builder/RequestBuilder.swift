@@ -3,10 +3,16 @@ import Foundation
 struct RequestBuilder: RequestBuilding {
     private let baseURL: URL
     private var headerStrategies: [HeaderDecorator]
+    private var stringURL = APIEnvironment.current().baseURL
     
-    init(stringURL: String, headerStrategies: [HeaderDecorator] = []) {
-        guard let url = URL(string: stringURL) else {
-            fatalError("Invalid URL: \(stringURL)")
+    init(stringURL: String? = nil, headerStrategies: [HeaderDecorator] = []) {
+        
+        if let stringURL = stringURL {
+            self.stringURL = stringURL
+        }
+        
+        guard let url = URL(string: self.stringURL) else {
+            fatalError("Invalid URL: \(self.stringURL)")
         }
         
         self.baseURL = url

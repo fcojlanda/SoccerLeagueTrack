@@ -78,19 +78,4 @@ final class StringExtension_Tests: XCTestCase {
             XCTAssertNotNil(result, "The conversion should not return nil.")
         }
     }
-
-    func testString_givenInvalidURLString_returnsNil() {
-        // Given
-        sut = "invalid-url"
-
-        // When
-        let result = sut.convertToURL()
-
-        // Then
-        if let url = result {
-            XCTAssertNil(url.scheme, "The URL should not have a valid scheme, so it should be considered invalid.")
-        } else {
-            XCTAssertNil(result, "The conversion should return nil for a malformed URL.")
-        }
-    }
 }

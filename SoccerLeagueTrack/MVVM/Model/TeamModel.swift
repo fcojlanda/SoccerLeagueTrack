@@ -1,6 +1,6 @@
 import Foundation
 
-struct TeamModel {
+struct TeamModel: Decodable {
     var idStanding: Int?
     var intRank: Int?
     var idTeam: Int?

@@ -76,4 +76,11 @@ enum RawTeamModelTestData {
             "dateUpdated": "2023-01-30"
         }
         """.data(using: .utf8)!
+    
+    static var errorResponseData = """
+    {
+        "message": "An error occurred",
+        "status": 400
+    }
+    """.data(using: .utf8)
 }

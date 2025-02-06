@@ -32,7 +32,7 @@ final class RequestBuilderTests: XCTestCase {
         // Given
         let endpoint = Endpoint(path: "/v1/test", method: .POST, queryParams: nil)
         
-        let defaultHeaders = DefaultHeaderStrategy()
+        let defaultHeaders = ApplicationJSONHeaderStrategy()
         sut.addHeaderStrategy(defaultHeaders)
 
         // When

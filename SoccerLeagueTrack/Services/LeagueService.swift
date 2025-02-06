@@ -5,7 +5,7 @@ class LeagueService: LeagueServicing {
     var errorMapper: ErrorMapperProtocol
 
     init(networkService: NetworkServicing? = nil, errorMapper: ErrorMapperProtocol = ErrorRequestMapper()) {
-        let defaultHeader = DefaultHeaderStrategy()
+        let defaultHeader = ApplicationJSONHeaderStrategy()
         let requestBuilder = RequestBuilder(headerStrategies: [defaultHeader])
         
         if let networkService {

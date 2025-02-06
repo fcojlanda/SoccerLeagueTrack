@@ -2,10 +2,10 @@ import Foundation
 
 class LeagueService: LeagueServicing {
     var networkService: NetworkServicing
-    var errorMapper: ErrorMapperProtocol
+    var errorMapper: ErrorMapping
 
-    init(networkService: NetworkServicing? = nil, errorMapper: ErrorMapperProtocol = ErrorRequestMapper()) {
-        let defaultHeader = ApplicationJSONHeaderStrategy()
+    init(networkService: NetworkServicing? = nil, errorMapper: ErrorMapping = ErrorRequestMapper()) {
+        let defaultHeader = ApplicationJSONHeaderDecorator()
         let requestBuilder = RequestBuilder(headerStrategies: [defaultHeader])
         
         if let networkService {

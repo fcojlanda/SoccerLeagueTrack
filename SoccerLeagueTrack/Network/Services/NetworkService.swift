@@ -3,11 +3,11 @@ import Foundation
 actor NetworkService: @preconcurrency NetworkServicing {
     var responseHandler: ResponseHandling
     var requestBuilder: RequestBuilding
-    var session :URLSessionProtocol
+    var session :URLSessionFetching
     
     init(requestBuilder: RequestBuilding,
          responseHandler: ResponseHandling = ResponseHandler(),
-         session: URLSessionProtocol = URLSession.shared) {
+         session: URLSessionFetching = URLSession.shared) {
         self.requestBuilder = requestBuilder
         self.responseHandler = responseHandler
         self.session = session

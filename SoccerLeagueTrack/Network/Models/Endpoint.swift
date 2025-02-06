@@ -1,6 +1,6 @@
 import Foundation
 
-struct Endpoint: EndpointRepresentable {
+struct Endpoint: EndpointDefinition {
     let path: String
     let method: HTTPMethod
     let body: Data?

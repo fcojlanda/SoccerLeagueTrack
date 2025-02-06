@@ -1,3 +1,3 @@
-protocol ErrorMapperProtocol {
+protocol ErrorMapping {
     func map(statusCode: Int) -> ErrorNetworkType?
 }

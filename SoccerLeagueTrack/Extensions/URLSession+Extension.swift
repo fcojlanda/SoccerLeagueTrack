@@ -1,3 +1,3 @@
 import Foundation
 
-extension URLSession: URLSessionProtocol {}
+extension URLSession: URLSessionFetching {}

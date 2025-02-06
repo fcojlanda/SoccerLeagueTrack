@@ -1,6 +1,6 @@
 @testable import SoccerLeagueTrack
 
-class MockErrorMapper: ErrorMapperProtocol {
+class MockErrorMapper: ErrorMapping {
     var stubbedError: ErrorNetworkType?
 
     func map(statusCode: Int) -> ErrorNetworkType? {

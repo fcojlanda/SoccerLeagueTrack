@@ -18,7 +18,7 @@ struct RequestBuilder: RequestBuilding {
         self.baseURL = url
         self.headerStrategies = headerStrategies
         
-        addHeaderStrategy(DefaultHeaderStrategy())
+        addHeaderStrategy(ApplicationJSONHeaderDecorator())
     }
     
     func buildRequest(for endpoint: Endpoint) throws -> URLRequest {

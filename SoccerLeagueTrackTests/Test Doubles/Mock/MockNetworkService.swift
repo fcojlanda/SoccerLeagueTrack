@@ -4,12 +4,12 @@ import XCTest
 class MockNetworkService: NetworkServicing {
     var responseHandler: ResponseHandling
     var requestBuilder: RequestBuilding
-    var session: URLSessionProtocol
+    var session: URLSessionFetching
     var stubbedResult: ServiceResponse<Data>?
 
     init(responseHandler: ResponseHandling = MockResponseHandler(),
          requestBuilder: RequestBuilding = MockRequestBuilder(),
-         session: URLSessionProtocol = MockURLSession()) {
+         session: URLSessionFetching = MockURLSession()) {
         self.responseHandler = responseHandler
         self.requestBuilder = requestBuilder
         self.session = session

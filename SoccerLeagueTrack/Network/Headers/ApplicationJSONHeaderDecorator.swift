@@ -1,4 +1,4 @@
-struct DefaultHeaderStrategy: HeaderDecorator {
+struct ApplicationJSONHeaderDecorator: HeaderDecorator {
     func decorateHeaders() -> [String: String] {
         return [
             "Content-Type": "application/json",

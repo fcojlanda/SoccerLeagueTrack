@@ -1,4 +1,4 @@
-class ErrorRequestMapper: ErrorMapperProtocol {
+class ErrorRequestMapper: ErrorMapping {
     let specificErrors: [Int: ErrorNetworkType] = [
         400: .invalidRequest,
         401: .unauthorized,

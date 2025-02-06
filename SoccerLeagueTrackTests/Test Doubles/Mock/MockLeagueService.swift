@@ -3,7 +3,7 @@ import Foundation
 
 class MockLeagueService: LeagueServicing {
     var networkService: NetworkServicing
-    var errorMapper: ErrorMapperProtocol
+    var errorMapper: ErrorMapping
     var stubbedResult: ServiceResponse<[TeamModel]>?
     
     private var jsonDecoder: JSONDecoder!

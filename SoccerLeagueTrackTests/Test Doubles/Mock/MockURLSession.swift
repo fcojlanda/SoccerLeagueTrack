@@ -1,7 +1,7 @@
 @testable import SoccerLeagueTrack
 import Foundation
 
-class MockURLSession: URLSessionProtocol {
+class MockURLSession: URLSessionFetching {
     var stubbedData: Data?
     var stubbedResponse: URLResponse?
     var stubbedError: Error?

@@ -1,9 +1,9 @@
 import Foundation
 
 class ResponseHandler: ResponseHandling {
-    var errorMapper: ErrorMapperProtocol
+    var errorMapper: ErrorMapping
 
-    init(errorMapper: ErrorMapperProtocol = ErrorRequestMapper()) {
+    init(errorMapper: ErrorMapping = ErrorRequestMapper()) {
         self.errorMapper = errorMapper
     }
 

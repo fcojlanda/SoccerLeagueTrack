@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "2A1D4F1E-597A-46CF-8AF5-704FEA11D3F9",
+      "name" : "Default",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "API_ENVIRONMENT",
+        "value" : "DEV"
+      }
+    ]
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:SoccerLeagueTrack.xcodeproj",
+        "identifier" : "122EFAA42D4E9462004703FC",
+        "name" : "SoccerLeagueTrackTests"
+      }
+    }
+  ],
+  "version" : 1
+}
